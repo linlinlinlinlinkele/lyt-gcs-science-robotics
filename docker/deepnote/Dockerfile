@@ -19,11 +19,11 @@ ENV SHELL /bin/bash
 EXPOSE 7000-7099/tcp
 EXPOSE 8888/tcp
 
-LABEL org.opencontainers.image.authors="David von Wrangel"
-LABEL org.opencontainers.image.description="Drake with sampling based planning for the gcs paper"
+LABEL org.opencontainers.image.authors="Lin Yutong"
+LABEL org.opencontainers.image.description="gcs code"
 LABEL org.opencontainers.image.licenses="BSD-3-Clause"
-LABEL org.opencontainers.image.source="https://github.com/wrangelvid/drake/tree/gcs-science-robotics"
-LABEL org.opencontainers.image.vendor="Massachusetts Institute of Technology"
+LABEL org.opencontainers.image.source="https://github.com/linlinlinlinlinkele/lyt-gcs-science-robotics"
+LABEL org.opencontainers.image.vendor="USTC"
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
@@ -59,8 +59,10 @@ RUN pip3 install --upgrade notebook
 # Install GCS repository.
 ENV DISPLAY=:1
 ENV MOSEKLM_LICENSE_FILE="/tmp/mosek.lic"
-RUN git clone https://github.com/RobotLocomotion/gcs-science-robotics.git
-ENV PYTHONPATH=/gcs-science-robotics:${PYTHONPATH}
+ENV PYTHONPATH=/opt/drake:${PYTHONPATH}
+# RUN git clone https://github.com/RobotLocomotion/gcs-science-robotics.git
+# ENV PYTHONPATH=/gcs-science-robotics:${PYTHONPATH}
+
 
 # Source environment of Drake installed to /drake
 ENV PYTHONPATH=/opt/drake/lib/python3.10/site-packages:${PYTHONPATH}
