@@ -1,6 +1,6 @@
 import pydot
 import numpy as np
-
+# 这是更新的代码3.27下午
 from pydrake.geometry.optimization import (
     GraphOfConvexSets,
     GraphOfConvexSetsOptions,
