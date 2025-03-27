@@ -1,0 +1,15 @@
+# List of files for git to ignore
+
+/bazel-*
+/build/
+/cmake-build-*/
+/.vscode
+
+models/room_gen/building.sdf
+
+.ipynb_checkpoints
+*.egg-info/
+*.pyc
+*.tar
+
+*.DS_Store
